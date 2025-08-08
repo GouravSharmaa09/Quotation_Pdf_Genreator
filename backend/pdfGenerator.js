@@ -13,7 +13,7 @@ export async function generatePDF(formData) {
     
     // Launch a headless browser
     const browser = await puppeteer.launch({
-      headless: 'new', // Use the new headless mode
+       executablePath: '/usr/bin/chromium', // Use the new headless mode
       args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
     
