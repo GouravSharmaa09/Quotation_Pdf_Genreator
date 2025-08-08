@@ -119,8 +119,9 @@ const QuotationForm = () => {
     
     setLoading(true);
     
-    try {
-      const response = await axios.post('/api/generate-pdf', formData, {
+     try {
+      const backendUrl = 'https://quotation-111.onrender.com';
+      const response = await axios.post(`${backendUrl}/api/generate-pdf`, formData, {
         responseType: 'blob' // Important for handling PDF binary data
       });
       
